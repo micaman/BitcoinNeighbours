@@ -3,6 +3,8 @@ BitcoinNeighbours
 
 Displays connected nodes on a map.
 
+![](https://github.com/micaman/BitcoinNeighbours/raw/master/bitcoin27connections20170720.png)
+
 Getting Started
 ---------------
 1. Setup your RPC credentials on rpcConfig.php
