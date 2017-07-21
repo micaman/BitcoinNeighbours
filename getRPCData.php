@@ -14,16 +14,25 @@
 	for ($i = 0; $i < count($jsonRes->result); $i++) {
 		$c = $jsonRes->result[$i];
 		$a = $c->addr;
+		$v = $c->subver;
 		$arr1 = explode(":", $a);
+		
+		$con = array();
+		$con["ip"] = "";
+		$con["ver"] = "";
 		
 		// skipping ipv6 for now
 		if (count($arr1) === 2) { 						// ipv4
 			if ($arr1[1] === "8333") { 					// outbound con
-				$connections["out"][] = $arr1[0];
-			} else { 									// inbound con
-				$connections["in"][] = $arr1[0];
+				$con["ip"] = $arr1[0];
+				$con["ver"] = $v;
+				$connections["out"][] = $con;
+			} else { 							// inbound con
+				$con["ip"] = $arr1[0];
+				$con["ver"] = $v;
+				$connections["in"][] = $con;
 			}
-		} else { 										//ipv6
+		} else { 								//ipv6
 			continue;
 		}
 	}
