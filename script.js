@@ -3,6 +3,8 @@ var arcarr = [];
 var home = { latitude: -49.2159422, longitude: 69.0663163 }; // set home coordinates manually for fine tuning and -1 ip check
 var map1;
 var iconSize = 16;
+var showArcs = true;
+var showIcons = true;
 
 function drawMap() {
 	// setup map
@@ -29,7 +31,10 @@ function drawMap() {
 	// update country colors
 	map1.updateChoropleth(aux);
 	// draw arcs
-	map1.arc( arcarr, {strokeWidth: 0.5});
+	if (showArcs) {
+		map1.arc( arcarr, {strokeWidth: 0.5});
+	}
+	
 	
     
 	function handleMarkers (layer, data, options ) {
@@ -94,7 +99,10 @@ function drawMap() {
 		}
 		map1.markers(auxm, {defaultIcon: 'icons/unk.png'});
 	}
-	setMarkers();
+	if (showIcons) {
+		setMarkers();
+	}
+	
 	console.log("Connections:",arcarr.length);
 	return
 }
