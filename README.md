@@ -15,3 +15,9 @@ Additional Info
 ---------------
 * Uses http://ip-api.com/ to get geodata from IPs.
 
+
+Warning!
+---------------
+* SSL is disabled by default, RPC credentials are not encrypted.
+* Use this locally or setup SSL on easybitcoin.php if you plan to use this remotelly.
+
