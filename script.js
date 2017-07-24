@@ -169,8 +169,8 @@ function getIconFromVer(ver) {
 	if (ver.indexOf("knots") > -1) {
 		return "icons/knots.png";
 	}
-	if (ver.indexOf("bitcoij") > -1) {
-		return "icons/bitcoij.svg";
+	if (ver.indexOf("bitcoinj") > -1) {
+		return "icons/bitcoinj.svg";
 	}
 	if (ver.indexOf("bitcore") > -1) {
 		return "icons/bitcore.png";
